@@ -7,6 +7,7 @@ public class PentahoProcurementProperties {
     private String baseUrl;
     private String userId;
     private String password;
+    private int maxInMemorySize = 16777216;
     private String procurementYearsPath;
     private String procurementYearsDataAccessId;
     private String procurementOrganizationsPath;
@@ -22,6 +23,8 @@ public class PentahoProcurementProperties {
     public void setUserId(String value) { userId = value; }
     public String getPassword() { return password; }
     public void setPassword(String value) { password = value; }
+    public int getMaxInMemorySize() { return maxInMemorySize; }
+    public void setMaxInMemorySize(int value) { maxInMemorySize = value; }
     public String getProcurementYearsPath() { return procurementYearsPath; }
     public void setProcurementYearsPath(String value) { procurementYearsPath = value; }
     public String getProcurementYearsDataAccessId() { return procurementYearsDataAccessId; }

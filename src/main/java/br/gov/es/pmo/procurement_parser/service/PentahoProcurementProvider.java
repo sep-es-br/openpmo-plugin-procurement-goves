@@ -5,7 +5,7 @@ import java.util.List; import java.util.stream.Collectors;
 @Component public class PentahoProcurementProvider implements IProcurementProvider {
  private static final String ENDPOINT="/pentaho/plugin/cda/api/doQuery";
  private final PentahoProcurementProperties props; private final Environment env; private final WebClient client;
- public PentahoProcurementProvider(PentahoProcurementProperties p,Environment e){props=p;env=e;client=WebClient.builder().baseUrl(p.getBaseUrl()).build();}
+ public PentahoProcurementProvider(PentahoProcurementProperties p,Environment e){props=p;env=e;client=WebClient.builder().baseUrl(p.getBaseUrl()).codecs(c->c.defaultCodecs().maxInMemorySize(p.getMaxInMemorySize())).build();}
  public List<Long> getYears(){return query(props.getProcurementYearsPath(),props.getProcurementYearsDataAccessId(),null).getResultset().stream().map(r->Long.valueOf(v(r,0))).collect(Collectors.toList());}
  public List<ProcurementOrganizationDto> getOrganizations(Long year){return query(props.getProcurementOrganizationsPath(),props.getProcurementOrganizationsDataAccessId(),new String[][]{{"paramp_ano",year.toString()}}).getResultset().stream().map(r->new ProcurementOrganizationDto(v(r,0),v(r,0))).collect(Collectors.toList());}
  public List<ProcurementDto> getProcurements(Long year,ProcurementOrganizationDto o){return query(props.getProcurementProcessesPath(),props.getProcurementProcessesDataAccessId(),new String[][]{{"paramp_ano",year.toString()},{"paramp_orgao",o.getIdentifier()}}).getResultset().stream().map(r->map(r,year,o.getName())).collect(Collectors.toList());}
