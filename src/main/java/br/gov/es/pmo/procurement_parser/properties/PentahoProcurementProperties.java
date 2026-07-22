@@ -7,14 +7,14 @@ public class PentahoProcurementProperties {
     private String baseUrl;
     private String userId;
     private String password;
-    private String yearsPath;
-    private String yearsDataAccessId;
-    private String organizationsPath;
-    private String organizationsDataAccessId;
-    private String processesPath;
-    private String processesDataAccessId;
-    private String procurementPath;
-    private String procurementDataAccessId;
+    private String procurementYearsPath;
+    private String procurementYearsDataAccessId;
+    private String procurementOrganizationsPath;
+    private String procurementOrganizationsDataAccessId;
+    private String procurementProcessesPath;
+    private String procurementProcessesDataAccessId;
+    private String procurementDetailPath;
+    private String procurementDetailDataAccessId;
 
     public String getBaseUrl() { return baseUrl; }
     public void setBaseUrl(String value) { baseUrl = value; }
@@ -22,20 +22,20 @@ public class PentahoProcurementProperties {
     public void setUserId(String value) { userId = value; }
     public String getPassword() { return password; }
     public void setPassword(String value) { password = value; }
-    public String getYearsPath() { return yearsPath; }
-    public void setYearsPath(String value) { yearsPath = value; }
-    public String getYearsDataAccessId() { return yearsDataAccessId; }
-    public void setYearsDataAccessId(String value) { yearsDataAccessId = value; }
-    public String getOrganizationsPath() { return organizationsPath; }
-    public void setOrganizationsPath(String value) { organizationsPath = value; }
-    public String getOrganizationsDataAccessId() { return organizationsDataAccessId; }
-    public void setOrganizationsDataAccessId(String value) { organizationsDataAccessId = value; }
-    public String getProcessesPath() { return processesPath; }
-    public void setProcessesPath(String value) { processesPath = value; }
-    public String getProcessesDataAccessId() { return processesDataAccessId; }
-    public void setProcessesDataAccessId(String value) { processesDataAccessId = value; }
-    public String getProcurementPath() { return procurementPath; }
-    public void setProcurementPath(String value) { procurementPath = value; }
-    public String getProcurementDataAccessId() { return procurementDataAccessId; }
-    public void setProcurementDataAccessId(String value) { procurementDataAccessId = value; }
+    public String getProcurementYearsPath() { return procurementYearsPath; }
+    public void setProcurementYearsPath(String value) { procurementYearsPath = value; }
+    public String getProcurementYearsDataAccessId() { return procurementYearsDataAccessId; }
+    public void setProcurementYearsDataAccessId(String value) { procurementYearsDataAccessId = value; }
+    public String getProcurementOrganizationsPath() { return procurementOrganizationsPath; }
+    public void setProcurementOrganizationsPath(String value) { procurementOrganizationsPath = value; }
+    public String getProcurementOrganizationsDataAccessId() { return procurementOrganizationsDataAccessId; }
+    public void setProcurementOrganizationsDataAccessId(String value) { procurementOrganizationsDataAccessId = value; }
+    public String getProcurementProcessesPath() { return procurementProcessesPath; }
+    public void setProcurementProcessesPath(String value) { procurementProcessesPath = value; }
+    public String getProcurementProcessesDataAccessId() { return procurementProcessesDataAccessId; }
+    public void setProcurementProcessesDataAccessId(String value) { procurementProcessesDataAccessId = value; }
+    public String getProcurementDetailPath() { return procurementDetailPath; }
+    public void setProcurementDetailPath(String value) { procurementDetailPath = value; }
+    public String getProcurementDetailDataAccessId() { return procurementDetailDataAccessId; }
+    public void setProcurementDetailDataAccessId(String value) { procurementDetailDataAccessId = value; }
 }
